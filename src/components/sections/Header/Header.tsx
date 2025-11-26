@@ -34,7 +34,7 @@ export default function HeaderSection({ name, profileImage, age, title, links }:
         </div>
       </Reveal>
 
-      <Reveal className="flex flex-col items-center justify-center mt-18 gap-2 py-2">
+      <Reveal className="flex flex-col items-center justify-center mt-20 gap-2 py-2">
         <h1 className="font-bold text-4xl">{name}</h1>
         <div className="flex flex-col items-center justify-center"><p className="text-sm">{age} <Tooltip content={<p className="text-nowrap" >Imus, Cavite, Philippines</p>}>🇵🇭 </Tooltip></p>
           <p className="text-center">{title}</p> </div>

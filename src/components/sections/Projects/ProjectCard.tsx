@@ -49,7 +49,7 @@ export function ProjectCard() {
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0  grid place-items-center z-[100]">
+          <div className="fixed inset-0  grid place-items-center z-100">
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
@@ -73,7 +73,7 @@ export function ProjectCard() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px] h-full md:max-h-[95%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-screen max-w-[500px] h-screen flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl md:h-[95vh] overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
@@ -81,7 +81,7 @@ export function ProjectCard() {
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-80 md:h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-full h-60 md:h-70 lg:h-70 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
               </motion.div>
 
