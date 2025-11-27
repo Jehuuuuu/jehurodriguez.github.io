@@ -1,6 +1,6 @@
 import type { ReactElement } from "react"
 import Banner from "./Banner"
-import { FaFilePdf, FaGithub, FaSquareXTwitter } from "react-icons/fa6"
+import { FaFilePdf, FaGithub, FaLinkedin, FaSquareXTwitter } from "react-icons/fa6"
 import { FaFacebookSquare } from "react-icons/fa"
 import { MdEmail } from "react-icons/md"
 import { Tooltip } from "@/components/ui/tooltip-card"
@@ -41,105 +41,134 @@ export default function HeaderSection({ name, profileImage, age, title, links }:
           <p className="text-center">{title}</p> </div>
 
         <div className="flex items-center space-x-2">
-          <Tooltip content={
-            <img src="/tooltip-resume.jpg" alt="Resume file of Jehu Rodriguez" className="max-w-full h-auto" />
-          }
-          >
-            <a
-              className="hover:opacity-80 touch-manipulation active:opacity-75"
-              rel="noopener noreferrer"
-              target="_blank"
-              href={links?.resume}
-              style={{
-                WebkitTapHighlightColor: 'transparent',
-                WebkitTouchCallout: 'none',
-                WebkitUserSelect: 'none',
-                userSelect: 'none'
-              }}
+          {links?.resume && (
+            <Tooltip content={
+              <img src="/tooltip-resume.jpg" alt="Resume file of Jehu Rodriguez" className="max-w-full h-auto" />
+            }
             >
-              <button className="resume-btn flex items-center gap-2 rounded-xl p-2 cursor-pointer"><FaFilePdf size={17} />Resume</button>
-            </a>
-          </Tooltip>
-          <Tooltip content={
-            <img src="/tooltip-github.png" alt="Visit Jehu Rodriguez's Github Profile " className="max-w-full h-auto" />
-          }
-          >
-            <a
-              className="hover:opacity-80 touch-manipulation active:opacity-75"
-              rel="noopener noreferrer"
-              target="_blank"
-              href={links?.github}
-              style={{
-                WebkitTapHighlightColor: 'transparent',
-                WebkitTouchCallout: 'none',
-                WebkitUserSelect: 'none',
-                userSelect: 'none'
-              }}
+              <a
+                className="hover:opacity-80 touch-manipulation active:opacity-75"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={links?.resume}
+                style={{
+                  WebkitTapHighlightColor: 'transparent',
+                  WebkitTouchCallout: 'none',
+                  WebkitUserSelect: 'none',
+                  userSelect: 'none'
+                }}
+              >
+                <button className="resume-btn flex items-center gap-2 rounded-xl p-2 cursor-pointer"><FaFilePdf size={17} />Resume</button>
+              </a>
+            </Tooltip>
+          )}
+          {links?.github && (
+            <Tooltip content={
+              <img src="/tooltip-github.png" alt="Visit Jehu Rodriguez's Github Profile " className="max-w-full h-auto" />
+            }
             >
-              <FaGithub size={20} />
-            </a>
-          </Tooltip>
+              <a
+                className="hover:opacity-80 touch-manipulation active:opacity-75"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={links?.github}
+                style={{
+                  WebkitTapHighlightColor: 'transparent',
+                  WebkitTouchCallout: 'none',
+                  WebkitUserSelect: 'none',
+                  userSelect: 'none'
+                }}
+              >
+                <FaGithub size={20} />
+              </a>
+            </Tooltip>
+          )}
+          {links?.linkedin && (
+            <Tooltip content={
+              <img src="/tooltip-linkedin.png" alt="Visit Jehu Rodriguez's Linkedin Profile " className="max-w-full h-auto" />
+            }
+            >
+              <a
+                className="hover:opacity-80 touch-manipulation active:opacity-75"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={links?.linkedin}
+                style={{
+                  WebkitTapHighlightColor: 'transparent',
+                  WebkitTouchCallout: 'none',
+                  WebkitUserSelect: 'none',
+                  userSelect: 'none'
+                }}
+              >
+                <FaLinkedin size={20} />
+              </a>
+            </Tooltip>
+          )}
+          {links?.twitter && (
+            <Tooltip content={
+              <img src="/tooltip-x.png" alt="Visit Jehu Rodriguez's X Account" className="max-w-full h-auto" />
+            }
+            >
+              <a
+                className="hover:opacity-80 touch-manipulation active:opacity-75"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={links?.twitter}
+                style={{
+                  WebkitTapHighlightColor: 'transparent',
+                  WebkitTouchCallout: 'none',
+                  WebkitUserSelect: 'none',
+                  userSelect: 'none'
+                }}
+              >
+                <FaSquareXTwitter size={20} />
+              </a>
+            </Tooltip>
+          )}
+          {links?.facebook && (
+            <Tooltip content={
+              <img src="/tooltip-facebook.png" alt="Visit Jehu Rodriguez's Facebook Account" className="rounded-sm max-w-full h-auto" />
+            }
+            >
+              <a
+                className="hover:opacity-80 touch-manipulation active:opacity-75"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={links?.facebook}
+                style={{
+                  WebkitTapHighlightColor: 'transparent',
+                  WebkitTouchCallout: 'none',
+                  WebkitUserSelect: 'none',
+                  userSelect: 'none'
+                }}
+              >
+                <FaFacebookSquare size={20} />
+              </a>
+            </Tooltip>
 
-          <Tooltip content={
-            <img src="/tooltip-x.png" alt="Visit Jehu Rodriguez's X Account" className="max-w-full h-auto" />
-          }
-          >
-            <a
-              className="hover:opacity-80 touch-manipulation active:opacity-75"
-              rel="noopener noreferrer"
-              target="_blank"
-              href={links?.twitter}
-              style={{
-                WebkitTapHighlightColor: 'transparent',
-                WebkitTouchCallout: 'none',
-                WebkitUserSelect: 'none',
-                userSelect: 'none'
-              }}
+          )}
+          {links?.email && (
+            <Tooltip content={
+              links?.email
+            }
             >
-              <FaSquareXTwitter size={20} />
-            </a>
-          </Tooltip>
-          <Tooltip content={
-            <img src="/tooltip-facebook.png" alt="Visit Jehu Rodriguez's Facebook Account" className="rounded-sm max-w-full h-auto" />
-          }
-          >
-            <a
-              className="hover:opacity-80 touch-manipulation active:opacity-75"
-              rel="noopener noreferrer"
-              target="_blank"
-              href={links?.facebook}
-              style={{
-                WebkitTapHighlightColor: 'transparent',
-                WebkitTouchCallout: 'none',
-                WebkitUserSelect: 'none',
-                userSelect: 'none'
-              }}
-            >
-              <FaFacebookSquare size={20} />
-            </a>
-          </Tooltip>
-          <Tooltip content={
-            links?.email
-          }
-          >
-            <a
-              className="hover:opacity-80 touch-manipulation active:opacity-75"
-              rel="noopener noreferrer"
-              target="_blank"
-              href={`https://mail.google.com/mail/?view=cm&to=${links?.email}`}
-              style={{
-                WebkitTapHighlightColor: 'transparent',
-                WebkitTouchCallout: 'none',
-                WebkitUserSelect: 'none',
-                userSelect: 'none'
-              }}
-            >
-              <MdEmail size={22} />
-            </a>
+              <a
+                className="hover:opacity-80 touch-manipulation active:opacity-75"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={`https://mail.google.com/mail/?view=cm&to=${links?.email}`}
+                style={{
+                  WebkitTapHighlightColor: 'transparent',
+                  WebkitTouchCallout: 'none',
+                  WebkitUserSelect: 'none',
+                  userSelect: 'none'
+                }}
+              >
+                <MdEmail size={22} />
+              </a>
 
-          </Tooltip>
-
-
+            </Tooltip>
+          )}
         </div>
 
       </Reveal>
