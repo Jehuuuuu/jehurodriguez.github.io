@@ -15,10 +15,7 @@ export const cards = [
     sourceUiText: "Source(UI)",
     content: () => {
       return (
-        <p>
-          An E-Commerce website tailored for a local handicraft business, featuring a 3D model generator for custom product
-          visualization and integrated Payrex payment support for both local and international transactions.
-        </p>
+        <p>An e-commerce website for a local handicraft business featuring a 3D model generator for custom product previews and online payments through Payrex.</p>
       );
     },
   },
@@ -33,9 +30,7 @@ export const cards = [
     sourceLinkIcon: <FaGithub size={15} />,
     content: () => {
       return (
-        <p>
-          A website-based feedback and evaluation system with sentiment analysis, implemented with Hugging Face Library APIs for
-          Cavite State University - Bacoor City Campus.</p>
+        <p>A web-based feedback and evaluation system for Cavite State University – Bacoor City Campus, featuring sentiment analysis powered by Hugging Face APIs.</p>
       );
     },
   },
