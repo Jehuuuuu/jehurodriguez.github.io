@@ -30,7 +30,7 @@ export const cards = [
     sourceLinkIcon: <FaGithub size={15} />,
     content: () => {
       return (
-        <p>A web-based feedback and evaluation system for Cavite State University – Bacoor City Campus, featuring sentiment analysis powered by Hugging Face APIs.</p>
+        <p>A web-based feedback and evaluation system for Cavite State University – Bacoor City Campus, featuring sentiment analysis to assess and interpret user responses.</p>
       );
     },
   },
